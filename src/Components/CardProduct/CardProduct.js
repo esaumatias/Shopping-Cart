@@ -9,7 +9,7 @@ function CardProduct() {
     <Container>
       {product.length > 0? (
         <Row
-          xs={5}
+          xs={2}
           md={5}
           className="g-6"
         >

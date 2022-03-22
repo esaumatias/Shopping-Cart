@@ -3,7 +3,9 @@ import AppContext from '../../Contex/AppContex';
 import { Navbar, Container, Nav, NavDropdown, Form } from 'react-bootstrap'
 
 function Header() {
-  const { categories } = useContext(AppContext);
+  const { categories, setSelectCategory, selectCategory } = useContext(AppContext);
+
+  console.log(selectCategory);
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -30,9 +32,9 @@ function Header() {
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
-          <Form.Select aria-label="Default select example">
+          <Form.Select aria-label="Default select example" onClick={({ target }) => setSelectCategory(target.value)}>
             {categories.map((category, index) => (
-              <option key={index}>{category.name}</option>
+              <option key={index} value={category.name}>{category.name}</option>
             ))}
           </Form.Select>
           </Form>

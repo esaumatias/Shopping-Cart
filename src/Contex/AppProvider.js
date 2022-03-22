@@ -5,6 +5,7 @@ const { getByProducts, getByCategories } = require('../services/fetchApi');
 function AppProvider({ children }) {
   const [categories, setCategories,] = useState([]);
   const [product, setProduct] = useState([]);
+  const [selectCategory, setSelectCategory] = useState([]);
 
   useEffect(() => {
     async function categories() {
@@ -30,6 +31,8 @@ function AppProvider({ children }) {
         setCategories,
         product,
         setProduct,
+        selectCategory,
+        setSelectCategory,
       }}
     >
       { children }
