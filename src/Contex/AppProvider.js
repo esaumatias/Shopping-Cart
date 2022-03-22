@@ -5,7 +5,7 @@ const { getByProducts, getByCategories } = require('../services/fetchApi');
 function AppProvider({ children }) {
   const [categories, setCategories,] = useState([]);
   const [product, setProduct] = useState([]);
-  const [selectCategory, setSelectCategory] = useState([]);
+  const [selectCategory, setSelectCategory] = useState('Acessórios para Veículos');
 
   useEffect(() => {
     async function categories() {
@@ -20,8 +20,9 @@ function AppProvider({ children }) {
       const products = await getByProducts(categoria);
       setProduct(products.results);
     }
-    products('Eletrodomésticos')
-  }, [setProduct])
+    const productSelected = selectCategory;
+    products(productSelected)
+  }, [product, selectCategory, setProduct])
 
 
   return (
