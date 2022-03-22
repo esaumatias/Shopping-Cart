@@ -10,6 +10,7 @@ function Header() {
     setProduct('');
     setSelectCategory(value);
   }
+  
 
   return (
     <Navbar bg="light" expand="lg" style={{ width: '100%' }}>
