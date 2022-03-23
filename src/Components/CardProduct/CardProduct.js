@@ -4,11 +4,12 @@ import AppContext from "../../Contex/AppContex";
 import { Row, Card, Container, Spinner, Button } from 'react-bootstrap';
 
 function CardProduct() {
-  const { product, setCarItens, carItens } = useContext(AppContext);
+  const { product, setCarItens, carItens, priceCart, setPriceCart } = useContext(AppContext);
 
   function addCart(index, name, price, img) {
     const itens = {index, name, price, img};
     setCarItens([...carItens, itens]);
+    setPriceCart(priceCart + price)
   }
 
   return (

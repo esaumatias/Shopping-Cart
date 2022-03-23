@@ -14,3 +14,39 @@
   justify-content: center;
   font-weight: 600;
 }
+
+.par {
+  background-color: #c4b588;
+}
+
+.impar {
+  background-color: #a19265;
+}
+
+.impar div p,
+.impar div strong,
+.par div p,
+.par div strong {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.impar div strong,
+.par div strong {
+  text-align: end;
+}
+
+.containerItensCart {
+  height: 80vh;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.totalCart {
+  background-color: white;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 5px;
+  border-radius: 0px 0px 9px 9px;
+}

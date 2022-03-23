@@ -7,6 +7,7 @@ function AppProvider({ children }) {
   const [product, setProduct] = useState([]);
   const [selectCategory, setSelectCategory] = useState('Acessórios para Veículos');
   const [carItens, setCarItens] = useState([]);
+  const [priceCart, setPriceCart] = useState(0);
 
   useEffect(() => {
     async function categories() {
@@ -37,6 +38,8 @@ function AppProvider({ children }) {
         setSelectCategory,
         carItens,
         setCarItens,
+        priceCart,
+        setPriceCart,
       }}
     >
       { children }
