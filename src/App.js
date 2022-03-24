@@ -12,8 +12,15 @@ function App() {
   return (
     <AppProvider>
       <Container>
-        <div style={{ display: 'flex'}}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+        <div style={{ display: "flex" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <Header />
             <CardProduct />
           </div>
@@ -22,7 +29,7 @@ function App() {
             <Cart />
           </div>
         </div>
-        </Container>
+      </Container>
     </AppProvider>
   );
 }

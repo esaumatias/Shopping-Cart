@@ -3,6 +3,8 @@
   width: 250px;
   height: 100vh;
   margin-left: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -29,6 +31,10 @@
 .par div strong {
   margin-top: 0px;
   margin-bottom: 0px;
+  font-size: 15px;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .impar div strong,
@@ -38,15 +44,40 @@
 
 .containerItensCart {
   height: 80vh;
-  overflow: auto;
+  overflow-y: scroll;
   margin-bottom: 10px;
 }
 
 .totalCart {
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   justify-content:space-between;
   align-items: center;
   margin: 5px;
   border-radius: 0px 0px 9px 9px;
+}
+
+.buttonCart {
+  text-decoration: none;
+  text-transform: none;
+  background-color: transparent;
+  border: none;
+}
+
+.buttonCart img {
+  width: 28px;
+  height: 28px;
+}
+
+.conatinerButons {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+@media (max-width: 680px) {
+  .containerCart {
+    display: none;
+  }
 }
