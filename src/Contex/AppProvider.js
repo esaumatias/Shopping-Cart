@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AppContext from './AppContex';
-const { getByProducts, getByCategories } = require('../services/fetchApi');
+import { getByProducts, getByCategories } from '../services/fetchApi';
 
 function AppProvider({ children }) {
   const [categories, setCategories,] = useState([]);
